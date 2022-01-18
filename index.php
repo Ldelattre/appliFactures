@@ -18,6 +18,17 @@ if (empty($_GET)) {
         case 'users' :
             print_view('users');
         break;
+
+        case 'produits' :
+            print_view('produits');
+        break;
+
+        case 'produit' :
+            include 'controllers/produitController.php';
+        break;
+
+        
+
         default :
             print_view('404');
     }

@@ -39,6 +39,11 @@ switch ($_GET['action']) {
         print_view('404');
     break;
 
+    case 'list':
+        $clients = get_all_clients();
+        print_view('clients/list', ['clients' =>$clients]);
+        break;
+
     default:
         print_view('404');
 }
